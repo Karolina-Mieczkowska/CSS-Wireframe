@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header, footer {
+    background: lightblue;
+    color: darkslategrey;
+    height: 100%;
+    width: 100%;
+}
+
+
+ul {
+    list-style: none;
+    margin-inline-end: 1em;
+}
+
+li {
+    float: right;
+    padding: 0 1em;
+}
+
+a {
+    text-decoration: none;
+    color: darkslategrey;
+}
+
+.website-description > p {
+    font-weight: bolder;
+}
+
+main {
+    
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+}
+
+.website-description, .service-description {
+    padding: 2em;
+}
+
+.reversed-header-wave {
+    transform: rotate(180deg);
+}
+
+.reversed-footer-wave {
+    background: white;
+}
+
+.blue {
+    background: aliceblue;
+}
+
+i {
+    padding-right: 1em;
+}
+
+img {
+    margin: 0;
+}
+
+.vector-image {
+    height: auto;
+    width: 50%;
+}
+
+.vector-image-container {
+    text-align: center;
+    padding-top: 2em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.hammer-icon {
+    padding-left: 0.5em;
+}
+
+
+/* Grid */
+
