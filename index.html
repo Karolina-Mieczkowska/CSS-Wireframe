@@ -11,7 +11,10 @@
     <title>CSS Wireframe</title>
 </head>
 <body>
-    <nav>
+    
+    
+
+    <nav class="desktop-nav">
         <ul>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#services">Services</a></li>
@@ -19,15 +22,28 @@
         </ul>
     </nav>
     <header class="header">
-        <section id="about" class="website-description">
-            <h1>Website title and description</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at odio maximus, tristique nibh ac, lacinia felis. Suspendisse fermentum lacinia urna sit amet ultrices.</p>
+        <div class="nav-container">
+            <div class="burger-icon"><i class="fas fa-bars"></i></div>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-ul">
+                    <li class="mobile-nav-li"><a class="mobile-nav-a" href="#contact">Contact</a></li>
+                    <li class="mobile-nav-li"><a class="mobile-nav-a" href="#services">Services</a></li>
+                    <li class="mobile-nav-li"><a class="mobile-nav-a" href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <section id="about" class="wave">
+            <div class="website-description">
+                <h1>Website title and description</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at odio maximus, tristique nibh ac, lacinia felis. Suspendisse fermentum lacinia urna sit amet ultrices.</p>
+            </div>
         </section>
-        <img class="reversed-header-wave" src="waves/white-wave.svg" alt="wave-icon">
+        <!-- <div class="wave"></div> -->
     </header>
     <main>
-        <section id="services">
-            <h2>Services<i class="fas fa-hammer hammer-icon"></i></h2>
+        <h2>Services<i class="fas fa-hammer hammer-icon"></i></h2>
+        <section id="services" class="services">
             <section class="section">
                 <div class="vector-image-container">
                     <img class="vector-image" src="img/plane.png" alt="paper plane">
@@ -37,8 +53,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at odio maximus, tristique nibh ac, lacinia felis. Suspendisse fermentum lacinia urna sit amet ultrices.</p>        
                 </div>
             </section>
-            <section class="section blue">
-                <img src="waves/white-wave.svg" alt="wave-icon">
+            <section class="section">
                 <div class="vector-image-container">
                     <img class="vector-image" src="img/plane.png" alt="paper plane">
                 </div>
@@ -48,7 +63,7 @@
                 </div>
             </section>
             <section class="section">
-                <img src="waves/lightblue-wave.svg" alt="wave-icon">
+                
                 <div class="vector-image-container">
                     <img class="vector-image" src="img/plane.png" alt="paper plane">
                 </div>
@@ -59,12 +74,99 @@
             </section>
             <section class="section blue"></section>
         </section>
-        <section id="contact" class="section">
-            
+        <h2>Contact<i class="fas fa-hammer hammer-icon"></i></h2>
+        <section id="contact" class="contact">
+            <form>
+                <label for="firstName"></label>
+                <input id="firstName" type="text" placeholder="First Name"/>
+                <label for="lastName"></label>
+                <input id="lastName" type="text" placeholder="Last Name"/>
+                <label for="e-mail"></label>
+                <input id="e-mail" type="email" placeholder="E-mail"/>
+                <label for="enquiry"></label>
+                <textarea id="enquiry" placeholder="Get in touch with us"></textarea>
+            </form>
         </section>
     </main>
-    <footer>
-        <img src="waves/white-wave.svg" alt="wave-icon">
+    <footer class="reversed-wave footer">
+
+        <section class="footer-top-section">
+            <div class="footer-description">
+                <h3>Website title and description</h3>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="product">
+                Product
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+            </div>
+            <div class="product">
+                Product
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+            </div>
+            <div class="product">
+                Product
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+            </div>
+            <div class="product">
+                Product
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+                <a href="#">Product</a>
+            </div>
+        </section>
+        <hr>
+        <aside class="footer-bottom-section">
+            <h3>Logo</h2>
+            <button>Get in touch</button>
+        </aside>
+        
+        <!-- <div class="website-description">
+            <h1>Website title and description</h1>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+        <div flass="footer-top-container">
+            <div class="product">
+                Product
+            </div>
+            <div class="product">
+                Product
+            </div>
+            <div class="product">
+                Product
+            </div>
+        </div>
+
+        <hr>
+        <div class="footer-bottom-container">
+            <h2>Logo</h2>
+            <button>Get in touch</button>
+        </div> -->
     </footer>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
