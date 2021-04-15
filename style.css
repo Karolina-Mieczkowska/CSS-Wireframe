@@ -6,25 +6,19 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    background: azure;
 }
 
 
 
 header, footer {
-    background: lightblue;
+    background: #00cccc;
     color: #000;
     height: 100%;
     width: 100%;
 }
 
-.reversed-wave {
-    background-image: url(waves/reversed-wave.svg);
-    background-repeat: no-repeat;
-    background-position-y: top;
-    width: 100%;
-    height: 150vh;
-    position: absolute;
-}
+
 
 .white-background {
     background: white;
@@ -32,6 +26,7 @@ header, footer {
 
 .service-description {
     padding: 2em;
+    background-color: transparent;    
 }
 
 /* .reversed-header-wave {
@@ -66,6 +61,7 @@ h2 {
     font-size: 3em;
     margin-block-start: 0;
     margin-block-end: 0;
+    background: white;
 }
 
 .hammer-icon {
@@ -78,26 +74,81 @@ h2 {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    /* margin-bottom: 10em; */
+    background-color: transparent;
+    /* padding-bottom: 5em; */
+}
+
+.service-section {
     padding-bottom: 3em;
 }
 
-.contact {
-    width: 50%;
+/* h2 {
+    background: white
+} */
+
+.services-container {
+    background: white;
+    padding-bottom: 5em;
+    /* height: 37em; */
+}
+
+/* .secion {
+    
+} */
+
+
+
+/* ..................................Waves */
+
+.wave {
+    background-image: url(waves/actualy-white-wave.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.azure-bottom-wave {
+    background-image: url(waves/azure-bottom-wave.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    /* width: 100%;
+    height: 100%; */
+    /* position: absolute; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+}
+
+.reversed-footer-wave {
+    background: white;
+}
+
+.reversed-wave {
+    background-image: url(waves/reversed-wave.svg);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    width: 100%;
+    height: 150vh;
+    position: absolute;
+}
+
+/* .h2-wave {
+    background-image: url(waves/blue-wave.svg);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    width: 100%;
     height: 50vh;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    
+    
+} */
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
+/* ..................................Waves */
 
 
 /* Grid */
@@ -126,7 +177,7 @@ a {
     text-align: right;
     color: #000;
     border: 1px solid black;
-    background: lightblue;
+    background: #00cccc;
     opacity: 0.5;
     cursor: pointer;
     position: absolute;
@@ -149,7 +200,7 @@ a {
     left: 0px;
     top: 0px;
     z-index: 1;
-    background: ;
+    display: none;
 }
 
 .mobile-nav-a {
@@ -183,7 +234,7 @@ a {
     .desktop-nav {
         display: none;
     }
-    .mobile-nav {
+    .mobile-nav, .burger-icon {
         display: block;
     }
   }
@@ -231,25 +282,114 @@ a {
     background-size: cover;
 }
 
-.wave {
-    background-image: url(waves/actualy-white-wave.svg);
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
+
 
 /* ..................................Header */
 
+/* ..................................Form */
+
+.contact-title {
+    background: azure;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.contact {
+    width: 100%;
+    /* height: 15em; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    background: azure;
+}
+
+form {
+    width: 50%;
+    /* height: 25em; */
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 10em; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 1; */
+    
+}
+
+.contact-input {
+    width: 100%;
+    height: 3em;
+    color: #00cccc;
+    margin-bottom: 1em;
+    font: 1.2em 'Montserrat', sans-serif;
+    padding: 1em 2em;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.contact-input:focus {
+    border: #00cccc;
+    border-style: solid;
+    outline: none;
+}
+
+.contact-input:-webkit-autofill,
+.contact-input:-webkit-autofill:hover, 
+.contact-input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid green;
+  -webkit-text-fill-color: green;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.contact-input::after {
+    background: black;
+}
+
+.contact-input::-webkit-input-placeholder {
+    color: #99ffff;
+    font: 1.2em 'Montserrat', sans-serif;
+} 
+
+
+.contact-input:-moz-placeholder {
+    color: #99ffff;
+    font: 1.2em 'Montserrat', sans-serif;
+}
+
+.contact-input::-moz-placeholder {
+    color: #99ffff;
+    font: 1.2em 'Montserrat', sans-serif;
+}
+
+.contact-input:-ms-input-placeholder {
+    color: #99ffff;
+    font: 1.2em 'Montserrat', sans-serif;
+}
+
+.contact-textarea {
+    height: 10em;
+}
+
+.contact-button {
+    height: 3em;
+}
+
+/* ..................................Form */
+
 /* ..................................Footer */
 
-.reversed-footer-wave {
-    background: white;
-}
+
 
 .footer {
     /* display: flex;
@@ -305,7 +445,7 @@ h3 {
     font-weight: bold;
 }
 
-button {
+.footer-button {
     width: 10em;
     height: 2em;
     margin: 0 3em;
@@ -327,9 +467,15 @@ button {
         width: 100%;
     }
     .contact {
-        width: 70%;
+        width: 100%;
     }
     .blue {
         background: aliceblue;
+    }
+    .services-container {
+        height: auto;
+    }
+    form {
+        width: 90%;
     }
   }
