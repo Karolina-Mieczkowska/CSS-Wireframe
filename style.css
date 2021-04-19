@@ -1,186 +1,15 @@
+/* ........................................................General */
+
 * {
     box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background: white;
-}
-
-
-
-header, footer {
-    background: #00cccc;
     color: #000;
-    height: 100%;
-    width: 100%;
-}
-
-footer {
-    height: auto;
-}
-
-.white-background {
-    background: white;
-}
-
-.service-description {
-    padding: 2em;
-    background-color: transparent;    
-}
-
-/* .reversed-header-wave {
-    transform: rotate(180deg);
-} */
-
-
-.blue {
-    background: white;
-}
-
-i {
-    padding-right: 1em;
-}
-
-img {
-    margin: 0;
-}
-
-.vector-image {
-    height: auto;
-    width: 50%;
-}
-
-.vector-image-container {
-    text-align: center;
-    padding-top: 2em;
-}
-
-h2 {
-    text-align: center;
-    font-size: 3em;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    background: white;
-}
-
-.hammer-icon {
-    padding-left: 0.5em;
-}
-
-.services {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-bottom: 10em; */
-    background-color: transparent;
-    /* padding-bottom: 5em; */
-}
-
-.service-section {
-    padding-bottom: 3em;
-}
-
-/* h2 {
-    background: white
-} */
-
-.services-container {
-    background: white;
-    padding-bottom: 1em;
-    /* height: 37em; */
-}
-
-.bottom-services-container {
-    padding-bottom: 5em;
-}
-
-/* .secion {
-    
-} */
-
-
-
-/* ..................................Waves */
-
-.wave {
-    background-image: url(waves/actualy-white-wave.svg);
-    background-repeat: no-repeat;
-    background-position-y: 101%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.white-wave {
-    background-image: url(waves/white-wave.svg);
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.azure-bottom-wave {
-    background-image: url(waves/azure-bottom-wave.svg);
-    background-repeat: no-repeat;
-    background-position-y: 101%;
-    /* width: 100%;
-    height: 100%; */
-    /* position: absolute; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-end; */
-}
-
-.reversed-footer-wave {
-    background: white;
-}
-
-.reversed-wave {
-    background-image: url(waves/reversed-wave.svg);
-    background-repeat: no-repeat;
-    background-position-y: top;
-    width: 100%;
-    position: absolute;
-}
-
-/* .h2-wave {
-    background-image: url(waves/blue-wave.svg);
-    background-repeat: no-repeat;
-    background-position-y: top;
-    width: 100%;
-    height: 50vh;
-    
-    
-} */
-
-/* ..................................Waves */
-
-
-/* Grid */
-
-/* ..................................Nav */
-
-
-ul {
-    list-style: none;
-    margin-inline-end: 1em;
-}
-
-li {
-    float: right;
-    padding: 0 1em;
 }
 
 a {
@@ -188,47 +17,80 @@ a {
     color: darkslategrey;
 }
 
+/* ........................................................General */
+/* ........................................................Desktop Nav */
+
+.desktop-nav {
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.desktop-nav ul {
+    background-color: lightcoral;
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.desktop-nav ul li {
+    position: relative;
+    top: 30%;
+    padding: 0 1em;
+}
+
+.desktop-nav ul li:last-child {
+    margin-right: 2em;
+}
+
+.desktop-nav a {
+    color: white;
+}
+
+/* ........................................................Desktop Nav */
+/* ........................................................Mobile Nav */
+
+
 .mobile-nav {
     width: 100%;
     display: none;
     text-align: right;
     color: #000;
-    border: 1px solid black;
-    background: #00cccc;
-    opacity: 0.5;
+    background: #fff;
     cursor: pointer;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 0;
     transform: translateY(-100%);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s linear;
 }
 
 .mobile-nav-active {
     transform: translateY(0);
+    top: 2em;
 }
 
 .burger-icon {
-    padding-top: 1em;
-    padding-left: 1em;
+    padding: 1em;
     cursor: pointer;
     position: relative;
     left: 0px;
     top: 0px;
     z-index: 1;
     display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
 }
 
-.mobile-nav-a {
-    color: black;
-    
-}
-
-.mobile-nav-ul {
+.mobile-nav ul {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     margin-block-start: 0;
     margin-block-end: 0;
     padding-inline-start: 0;
@@ -239,13 +101,18 @@ a {
     z-index: -1;
 }
 
-.mobile-nav-li {
-    border: 1px solid black;
-    padding-bottom: 2em;
+.mobile-nav li {
+    padding: 1em;
     text-align: center;
 }
 
+.mobile-nav li:last-child {
+    padding-bottom: 3em;
+}
 
+.mobile-nav a {
+    color: black;
+}
 
 @media only screen and (max-width: 600px) {
     .desktop-nav {
@@ -256,15 +123,19 @@ a {
     }
   }
 
-
-/* ..................................Nav */
-
+/* ........................................................Mobile Nav */
 /* ..................................Header */
+
+header {
+    background: #00cccc;
+    height: 100%;
+    width: 100%;
+    padding-top: 60px;
+}
 
 .website-description > p {
     font-weight: bolder;
     font-size: 1.5em;
-    /* font-size: 3vw; */
     float: left;
     margin: 0;
 }
@@ -292,7 +163,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url(img/plane.png);
+    background-image: url(img/background.png);
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: top;
@@ -317,24 +188,68 @@ a {
     background-color: transparent;
 }
 
-.about-title {
-    margin-bottom: 1em;
 
-}
 
 .about-detail-description {
     text-align: center;
 }
 
 /* ..................................About */
+/* ....................................................................Services */
+
+.services {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 10em; */
+    background-color: transparent;
+    /* padding-bottom: 5em; */
+}
+
+.service-section {
+    padding-bottom: 3em;
+}
+
+.services-container {
+    background: white;
+    padding-bottom: 1em;
+    /* height: 37em; */
+}
+
+
+
+.vector-image {
+    height: auto;
+    width: 50%;
+}
+
+.vector-image-container {
+    text-align: center;
+    padding-top: 2em;
+}
+
+.service-description {
+    padding: 2em;
+    background-color: transparent;    
+}
+
+.blue {
+    background: white;
+}
+
+/* ......................................................................Services */
+/* ......................................................................Testimonials */
+
+.bottom-services-container {
+    padding-bottom: 5em;
+}
+
+/* ......................................................................Testimonials */
 /* ..................................Form */
 
-.contact-title {
-    background: azure;
-    padding-bottom: 1em;
-    text-align: center;
-    color: #00cccc;
-}
+
 
 .contact {
     width: 100%;
@@ -491,10 +406,17 @@ button:focus {
 }
 
 /* ..................................Form */
-
 /* ..................................Footer */
 
+i {
+    padding-right: 1em;
+}
 
+footer {
+    height: auto;
+    background: #00cccc;
+    width: 100%;
+}
 
 .footer {
     /* display: flex;
@@ -566,9 +488,7 @@ h3 {
     text-align: center;
 }
 
-.description-title {
-    text-align: left;
-}
+
 
 .footer-button {
     width: 10em;
@@ -593,16 +513,89 @@ hr {
 
 
 /* ..................................Footer */
+/* ..................................................................Titles */
 
-/* ......................Services */
+.about-title {
+    margin-bottom: 1em;
+    margin-top: 1em;
 
-.azure-background, .azure-section-title {
-    background: azure;
 }
 
-/* ......................Services */
+.about-title:first-child {
+    margin-top: 0;
+}
 
-/* ..................................Responsive */
+.contact-title {
+    background: azure;
+    padding-bottom: 1em;
+    text-align: center;
+    color: #00cccc;
+}
+
+.description-title {
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    background: white;
+}
+
+/* ..................................................................Titles */
+/* ..................................Waves */
+
+.wave {
+    background-image: url(waves/actualy-white-wave.svg);
+    background-repeat: no-repeat;
+    background-position-y: 101%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.white-wave {
+    background-image: url(waves/white-wave.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.azure-bottom-wave {
+    background-image: url(waves/azure-bottom-wave.svg);
+    background-repeat: no-repeat;
+    background-position-y: 101%;
+    /* width: 100%;
+    height: 100%; */
+    /* position: absolute; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+}
+
+.reversed-footer-wave {
+    background: white;
+}
+
+.reversed-wave {
+    background-image: url(waves/reversed-wave.svg);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    width: 100%;
+    position: absolute;
+}
+
+/* ..................................Waves */
+/* ...................................................................Responsive */
 
 @media only screen and (max-width: 600px) {
     .website-description {
@@ -641,5 +634,15 @@ hr {
     }
     .about-description {
         width: 90%;
+        margin-bottom: 0;
+    }
+    .about-title {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .about-title:first-child {
+        margin-top: 1em;
     }
   }
+
+  /* ...................................................................Responsive */
