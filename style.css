@@ -6,7 +6,6 @@
 
 html, body {
     height: 100%;
-    width: 100%;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: #000;
@@ -17,6 +16,11 @@ a {
     color: darkslategrey;
 }
 
+p {
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+}
+
 /* ........................................................General */
 /* ........................................................Desktop Nav */
 
@@ -24,6 +28,8 @@ a {
     height: 50px;
     position: fixed;
     top: 0;
+    left: 0;
+    z-index: 1;
     width: 100%;
 }
 
@@ -34,6 +40,7 @@ a {
     list-style: none;
     display: flex;
     justify-content: flex-end;
+    position: relative;
 }
 
 .desktop-nav ul li {
@@ -126,25 +133,36 @@ a {
 /* ........................................................Mobile Nav */
 /* ..................................Header */
 
-header {
-    background: #00cccc;
+.header {
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
     height: 100%;
-    width: 100%;
-    padding-top: 60px;
 }
 
-.website-description > p {
-    font-weight: bolder;
-    font-size: 1.5em;
-    float: left;
-    margin: 0;
+.website-description {
+    width: 70%;
+    height: 70%;
+    padding-left: 5em;
 }
 
 .website-description > h1 {
     font-size: 3em;
 }
 
+.website-description > p {
+    font-weight: bolder;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;;
+    float: left;
+    margin: 0;
+}
+
 @media only screen and (max-width: 600px) {
+    .website-description {
+        margin-bottom: 3em;
+    }
     .website-description > p {
         font-size: 1em;
     }
@@ -153,27 +171,12 @@ header {
     }
   }
 
-.website-description {
-    width: 60%;
-    height: 70%;
-    padding-left: 5em;
-}
-
-.header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-image: url(img/background.png);
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: top;
-    background-size: cover;
-}
-
-
-
 /* ..................................Header */
 /* ..................................About */
+
+.about-container {
+    padding-top: 3em;
+}
 
 .about-icon {
     font-size: 5em;
@@ -188,10 +191,18 @@ header {
     background-color: transparent;
 }
 
-
-
 .about-detail-description {
     text-align: center;
+}
+
+.about-detail-description h3 {
+    font-size: 1.5em;
+    font-weight: ;
+    margin-block-end: 0;
+}
+
+.about-detail-description p {
+    margin-block-start: 0.5em;
 }
 
 /* ..................................About */
@@ -199,7 +210,6 @@ header {
 
 .services {
     display: flex;
-    flex-direction: row;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -208,17 +218,23 @@ header {
     /* padding-bottom: 5em; */
 }
 
+#about section {
+    flex: 1;
+}
+
+.services-title {
+    margin-block-end: 0.83em;
+    font-size: 3em;
+}
+
 .service-section {
     padding-bottom: 3em;
 }
 
 .services-container {
-    background: white;
     padding-bottom: 1em;
     /* height: 37em; */
 }
-
-
 
 .vector-image {
     height: auto;
@@ -227,12 +243,18 @@ header {
 
 .vector-image-container {
     text-align: center;
-    padding-top: 2em;
+    padding-top: 0;
 }
 
 .service-description {
     padding: 2em;
     background-color: transparent;    
+}
+
+.service-description h4 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-block-start: 0;
 }
 
 .blue {
@@ -242,9 +264,120 @@ header {
 /* ......................................................................Services */
 /* ......................................................................Testimonials */
 
-.bottom-services-container {
-    padding-bottom: 5em;
+.testimonials {
+    width: 70%;
+    height: 22em;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; 
+    top: 6em; 
+    margin-top: -4em;
 }
+
+.carousel {
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    height: 100%;
+    width: 300%;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.slider section {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.controls .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.arrow i {
+    font-size: 3em;
+    padding-right: 0;
+}
+
+.arrow.left {
+    left: 3em;
+}
+
+.arrow.right {
+    right: 3em;
+}
+
+.slider section h4 {
+    font-size: 1.5em;
+}
+
+.slider section p {
+    padding: 0 7em;
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+.slider section i {
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 600px) {
+    .testimonials {
+        width: 100%;
+        top: 10em; 
+        margin-top: -9em;
+    }
+    .carousel {
+        border: none;
+    }
+    .arrow.left {
+        left: 1em;
+    }
+    .arrow.right {
+        right: 1em;
+    }
+    .slider section p {
+        padding: 0 5em;
+        font-size: 1em;
+    }
+  }
+
+/* ......................................Testimonial list */
+
+.controls ul {
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.controls ul li {
+    width: 14px;
+    height: 14px;
+    border: 2px solid lightblue;
+    border-radius: 50px;
+    margin: 10px;
+    background: lightblue;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+.controls ul li.selected {
+    background: transparent;
+}
+
+/* ......................................Testimonial list */
 
 /* ......................................................................Testimonials */
 /* ..................................Form */
@@ -516,9 +649,9 @@ hr {
 /* ..................................................................Titles */
 
 .about-title {
-    margin-bottom: 1em;
+    margin-bottom: 0;
     margin-top: 1em;
-
+    font-size: 3em;
 }
 
 .about-title:first-child {
@@ -530,6 +663,7 @@ hr {
     padding-bottom: 1em;
     text-align: center;
     color: #00cccc;
+    font-size: 3em;
 }
 
 .description-title {
@@ -574,6 +708,7 @@ h2 {
     background-image: url(waves/azure-bottom-wave.svg);
     background-repeat: no-repeat;
     background-position-y: 101%;
+    height: 15em;
     /* width: 100%;
     height: 100%; */
     /* position: absolute; */
@@ -639,9 +774,16 @@ h2 {
     .about-title {
         margin-bottom: 0;
         margin-top: 0;
+        font-size: 2em;
     }
     .about-title:first-child {
         margin-top: 1em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .services-title {
+        font-size: 2em;
     }
   }
 
