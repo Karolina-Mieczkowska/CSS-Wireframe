@@ -8,7 +8,7 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    color: #000;
+    color: darkslategray;
 }
 
 a {
@@ -33,8 +33,12 @@ p {
     width: 100%;
 }
 
+.nav-logo {
+    position: absolute;
+    padding: 2em;
+}
+
 .desktop-nav ul {
-    background-color: lightcoral;
     height: 100%;
     margin: 0;
     list-style: none;
@@ -57,6 +61,14 @@ p {
     color: white;
 }
 
+.onscroll-nav {
+    background: #fff;
+}
+
+.onscroll-nav a {
+    color: #000;
+}
+
 /* ........................................................Desktop Nav */
 /* ........................................................Mobile Nav */
 
@@ -71,7 +83,7 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 1;
     transform: translateY(-100%);
     transition: transform 0.5s linear;
 }
@@ -121,7 +133,7 @@ p {
     color: black;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
     .desktop-nav {
         display: none;
     }
@@ -134,21 +146,28 @@ p {
 /* ..................................Header */
 
 .header {
-    background-image: url(img/background.png);
+    background-image: linear-gradient(315deg, rgba(144, 213, 236, 0.8) 0%, rgba(252, 87, 94, 0.8) 74%), url(img/landscape-1844226.svg);
     background-repeat: no-repeat;
-    background-position-x: center;
+    background-position: center;
     background-size: cover;
+    /* /* background: rgb(31,127,172); */
+    /* background-image: linear-gradient(90deg, rgba(31,127,172,0.8) 17%, rgba(0,212,255,0.8) 100%), url(img/landscape-1844226.svg);  */
     height: 100%;
+    color: #000;
 }
 
 .website-description {
-    width: 70%;
-    height: 70%;
-    padding-left: 5em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+    margin-top: 13em;
 }
 
 .website-description > h1 {
     font-size: 3em;
+    margin-block-end: 0.5em;
+    width: 60%;
 }
 
 .website-description > p {
@@ -159,7 +178,7 @@ p {
     margin: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
     .website-description {
         margin-bottom: 3em;
     }
@@ -168,6 +187,7 @@ p {
     }
     .website-description > h1 {
         font-size: 2em;
+        width: 100%;
     }
   }
 
@@ -181,6 +201,7 @@ p {
 .about-icon {
     font-size: 5em;
     padding-right: 0;
+    color: #3BA9DC;
 }
 
 .about-description {
@@ -270,8 +291,8 @@ p {
     margin-left: auto;
     margin-right: auto;
     position: relative; 
-    top: 6em; 
-    margin-top: -4em;
+    top: 12em; 
+    margin-top: -9em;
 }
 
 .carousel {
@@ -328,11 +349,12 @@ p {
     font-size: 0.8em;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
     .testimonials {
         width: 100%;
-        top: 10em; 
-        margin-top: -9em;
+        top: 22em; 
+        height: 30em;
+        margin-top: -22em;
     }
     .carousel {
         border: none;
@@ -346,6 +368,9 @@ p {
     .slider section p {
         padding: 0 5em;
         font-size: 1em;
+    }
+    .slider section {
+        height: fit-content;
     }
   }
 
@@ -390,7 +415,8 @@ p {
     /* display: flex;
     flex-direction: column;
     justify-content: center; */
-    background: azure;
+    background: #F1F6F9;
+    position: relative;
 }
 
 form {
@@ -415,7 +441,7 @@ form {
 .contact-input {
     width: 100%;
     height: 3em;
-    color: #00cccc;
+    color: #3BA9DC;
     margin-bottom: 1em;
     font: 1.2em 'Montserrat', sans-serif;
     padding: 1em 2em;
@@ -424,7 +450,7 @@ form {
 }
 
 .contact-input:focus {
-    border: #00cccc;
+    border: #3BA9DC;
     border-style: solid;
     outline: none;
 }
@@ -438,8 +464,8 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: 1px solid #00cccc;
-  -webkit-text-fill-color: #00cccc;
+  border: 1px solid #3BA9DC;
+  -webkit-text-fill-color: #3BA9DC;
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -450,25 +476,25 @@ select:-webkit-autofill:focus {
 
 .contact-textarea::-webkit-input-placeholder,
 .contact-input::-webkit-input-placeholder {
-    color: #99ffff;
+    color: #bde2f3;
     font: 1.2em 'Montserrat', sans-serif;
 } 
 
 .contact-textarea::-moz-placeholder,
 .contact-input:-moz-placeholder {
-    color: #99ffff;
+    color: #bde2f3;
     font: 1.2em 'Montserrat', sans-serif;
 }
 
 .contact-textarea::-moz-placeholder,
 .contact-input::-moz-placeholder {
-    color: #99ffff;
+    color: #bde2f3;
     font: 1.2em 'Montserrat', sans-serif;
 }
 
 .contact-textarea:-ms-input-placeholder,
 .contact-input:-ms-input-placeholder {
-    color: #99ffff;
+    color: #bde2f3;
     font: 1.2em 'Montserrat', sans-serif;
 }
 
@@ -476,7 +502,7 @@ select:-webkit-autofill:focus {
 
 .contact-textarea {
     height: 10em;
-    color: #00cccc;
+    color: #3BA9DC;
     margin-bottom: 1em;
     font: 1.2em 'Montserrat', sans-serif;
     padding: 1em 2em;
@@ -485,7 +511,7 @@ select:-webkit-autofill:focus {
 }
 
 .contact-textarea:focus {
-    border: #00cccc;
+    border: #3BA9DC;
     border-style: solid;
     outline: none;
 }
@@ -499,8 +525,8 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: 1px solid #00cccc;
-  -webkit-text-fill-color: #00cccc;
+  border: 1px solid #3BA9DC;
+  -webkit-text-fill-color: #3BA9DC;
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -516,7 +542,7 @@ button {
     padding: 1rem 2rem;
     margin: 0;
     text-decoration: none;
-    background: #0069ed;
+    background: #00598C;
     color: #ffffff;
     font-family: sans-serif;
     font-size: 1rem;
@@ -545,11 +571,9 @@ i {
     padding-right: 1em;
 }
 
-footer {
-    height: auto;
-    background: #00cccc;
-    width: 100%;
-}
+/* footer {
+    background-image: linear-gradient(45deg, red, blue);
+} */
 
 .footer {
     /* display: flex;
@@ -557,10 +581,13 @@ footer {
     justify-content: flex-end; */
     padding: 2em;
     padding-top: 20%;
+    height: auto;
+    background: #3BA9DC;
+    color: #000;
 }
 
 hr {
-    background-color: black;
+    background-color: darkslategray;
     width: 100%;
 }
 
@@ -571,28 +598,19 @@ hr {
     padding: 3em;
 }
 
-.footer-top-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr 2fr 2fr;
-}
-
 .footer-top-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2em;
+    padding: 3em;
 }
 
 .footer-icon {
-    font-size: 1.6em;
+    font-size: 1.4em;
 }
 
 .product {
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 1em;
-    width: 7em;
+    width: 9em;
     color: black;
 }
 
@@ -652,6 +670,7 @@ hr {
     margin-bottom: 0;
     margin-top: 1em;
     font-size: 3em;
+    color: darkslategray;
 }
 
 .about-title:first-child {
@@ -659,10 +678,10 @@ hr {
 }
 
 .contact-title {
-    background: azure;
+    background: #F1F6F9;
     padding-bottom: 1em;
     text-align: center;
-    color: #00cccc;
+    color: darkslategray;
     font-size: 3em;
 }
 
@@ -682,7 +701,7 @@ h2 {
 /* ..................................Waves */
 
 .wave {
-    background-image: url(waves/actualy-white-wave.svg);
+    background-image: url(waves/wave.svg);
     background-repeat: no-repeat;
     background-position-y: 101%;
     width: 100%;
@@ -707,10 +726,10 @@ h2 {
 .azure-bottom-wave {
     background-image: url(waves/azure-bottom-wave.svg);
     background-repeat: no-repeat;
-    background-position-y: 101%;
-    height: 15em;
-    /* width: 100%;
-    height: 100%; */
+    background-position-y: 103%;
+    height: 25em;
+    width: 100%;
+    /* height: 100%; */ */
     /* position: absolute; */
     /* display: flex;
     flex-direction: column;
@@ -732,7 +751,7 @@ h2 {
 /* ..................................Waves */
 /* ...................................................................Responsive */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
     .website-description {
       width:fit-content;
       height: auto;
@@ -784,6 +803,18 @@ h2 {
     }
     .services-title {
         font-size: 2em;
+    }
+    .contact-title {
+        font-size: 2em;
+    }
+    .nav-logo {
+        top: 2.5em;
+    }
+    .footer {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: flex-end; */
+        padding: 1em 0;
     }
   }
 

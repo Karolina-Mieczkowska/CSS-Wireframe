@@ -1,3 +1,13 @@
+//Desktop Nav 
+
+const desktopList = document.querySelector('.desktop-ul');
+
+window.onscroll = () => {
+    let currentScrollPos = window.pageYOffset;
+    (currentScrollPos > 20) ? 
+        desktopList.classList.add('onscroll-nav') : desktopList.classList.remove('onscroll-nav')
+}
+
 // Mobile nav
 
 document.querySelector(".burger-icon").addEventListener("click", function() {
