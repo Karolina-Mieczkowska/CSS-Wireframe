@@ -10,14 +10,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_p/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_p/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_p/favicon-16x16.png">
+    <link rel="manifest" href="favicon_p/site.webmanifest">
+    <link rel="mask-icon" href="favicon_p/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <title>CSS Wireframe</title>
 </head>
 <body>
-    
-    
-
     <nav class="desktop-nav">
-        <ul class="desktop-ul">
+        <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
@@ -30,14 +34,15 @@
         </section>
         <div class="nav-container">
             <div class="burger-icon">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars burger"></i>
+                <i class="fas fa-times cross"></i>
             </div>
             <nav class="mobile-nav">
                 <ul class="mobile-nav-ul">
-                    <li class="mobile-nav-li"><a class="mobile-nav-a" href="#about">About</a></li>
-                    <li class="mobile-nav-li"><a class="mobile-nav-a" href="#services">Services</a></li>
-                    <li class="mobile-nav-li"><a class="mobile-nav-a" href="#testimonials">Testimonials</a></li>
-                    <li class="mobile-nav-li"><a class="mobile-nav-a" href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,112 +53,114 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </section>
-        <!-- <div class="wave"></div> -->
     </header>
     <main>
-        <h2 class="about-title">About us</h2>
-        <div class="about-container">
+
+        <h2 id="about" class="website-section-title">About us</h2>
+        <section class="website-section-container">
             <section class="about-description">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint ratione reiciendis quod obcaecati totam ex harum sapiente aliquid, ullam cupiditate esse voluptatibus cum expedita soluta repellendus explicabo libero maiores ea.</p>
             </section>
-            <section id="about" class="services">
-                
-                <section class="section">
-                    <div class="vector-image-container">
+            <section class="section-detail-container">
+                <section class="section-about">
+                    <div class="detail-container">
                         <i class="fas fa-binoculars about-icon"></i>
                     </div>
-                    <div class="service-description about-detail-description">
+                    <div class="detail-description about-detail-description">
                         <h3>Lorem</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>        
                     </div>
                 </section>
-                <section class="section">
-                    <div class="vector-image-container">
+                <section class="section-about">
+                    <div class="detail-container">
                         <i class="fas fa-campground about-icon"></i>
                     </div>
-                    <div class="service-description about-detail-description">
+                    <div class="detail-description about-detail-description">
                         <h3>Ipsum</h3>
                         <p>Aliquid obcaecati quod amet culpa ducimus odit nihil eos quos dolorem facere?</p>        
                     </div>
                 </section>
-                <section class="section">
-                    
-                    <div class="vector-image-container">
+                <section class="section-about">
+                    <div class="detail-container">
                         <i class="fas fa-caravan about-icon"></i>
                     </div>
-                    <div class="service-description about-detail-description">
+                    <div class="detail-description about-detail-description">
                         <h3>Dolor</h3>
                         <p>Commodi deleniti exercitationem labore at expedita blanditiis voluptatem ullam qui enim in fuga atque ipsa, animi, aliquam iste earum.</p>        
                     </div>
                 </section>
             </section>
-        </div>
+        </section>
 
-        <h2 class="about-title">Our Services</h2>
-        <div class="about-container">
-            <section id="services" class="services">
-                
+        <h2 id="services" class="website-section-title">Our Services</h2>
+        <section class="website-section-container">
+            <section class="section-detail-container">
                 <section class="section">
-                    <div class="vector-image-container">
+                    <div class="detail-container">
                         <img class="vector-image" src="img/plane.png" alt="paper plane">
                     </div>
-                    <div class="service-description">
+                    <div class="detail-description">
                         <h4>Service 1</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at odio maximus, tristique nibh ac, lacinia felis. Suspendisse fermentum lacinia urna sit amet ultrices.</p>        
                     </div>
                 </section>
                 <section class="section">
-                    <div class="vector-image-container">
+                    <div class="detail-container">
                         <img class="vector-image" src="img/plane.png" alt="paper plane">
                     </div>
-                    <div class="service-description">
+                    <div class="detail-description">
                         <h4>Service 2</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at odio maximus, tristique nibh ac, lacinia felis. Suspendisse fermentum lacinia urna sit amet ultrices.</p>        
                     </div>
                 </section>
                 <section class="section">
-                    
-                    <div class="vector-image-container">
+                    <div class="detail-container">
                         <img class="vector-image" src="img/plane.png" alt="paper plane">
                     </div>
-                    <div class="service-description">
+                    <div class="detail-description">
                         <h4>Service 3</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at odio maximus, tristique nibh ac, lacinia felis. Suspendisse fermentum lacinia urna sit amet ultrices.</p>        
                     </div>
                 </section>
                 <section class="section blue"></section>
             </section>
-        </div>
+        </section>
         
-        <h2 id="testimonials" class="about-title">Testimonials</h2>
+        <h2 id="testimonials" class="website-section-title title-mobile-position">Testimonials</h2>
         <section class="testimonials">
             <div class="carousel">
                 <div class="slider">
                     <section>
                         <h4>Ann Doe</h4>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <div class="testimonial-icons">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur beatae corrupti, libero voluptate, possimus voluptas fugiat reiciendis maxime nesciunt cupiditate unde blanditiis?</p>
                     </section>
                     <section>
                         <h4>Jim Doe</h4>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <div class="testimonial-icons">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur beatae corrupti, libero voluptate, possimus voluptas fugiat reiciendis maxime nesciunt cupiditate unde blanditiis?</p>
                     </section>
                     <section>
                         <h4>Karen Doe</h4>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <div class="testimonial-icons">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur beatae corrupti, libero voluptate, possimus voluptas fugiat reiciendis maxime nesciunt cupiditate unde blanditiis?</p>
                     </section>
                 </div>
@@ -168,12 +175,10 @@
                 </ul>
             </div>
         </section>
-        <div class="azure-bottom-wave"></div>
 
-        <section id="contact" class="contact h2-wave">
+        <section id="contact" class="contact">
             <h2 class="contact-title">Contact</i></h2>
             <form>
-                
                 <label for="firstName"></label>
                 <input class ="contact-input" id="firstName" type="text" placeholder="First Name"/>
                 <label for="lastName"></label>
@@ -187,10 +192,9 @@
         </section>
     </main>
     <footer class="reversed-wave footer">
-
         <section class="footer-top-section">
             <div class="footer-description">
-                <h3 class="description-title">Website title and description</h3>
+                <h3 class="footer-title">Website title and description</h3>
                 <a href="#"><i class="fab fa-twitter footer-icon"></i></a>
                 <a href="#"><i class="fab fa-instagram footer-icon"></i></a>
                 <a href="#"><i class="fab fa-facebook-square footer-icon"></i></a>
@@ -202,31 +206,7 @@
             <h3 class="footer-logo"><i class="fas fa-igloo logo-icon"></i>Logo</h3>
             <button class="footer-button"><a href="#contact">Get in touch</a></button>
         </aside>
-        
-        <!-- <div class="website-description">
-            <h1>Website title and description</h1>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-youtube"></i>
-        </div>
-        <div flass="footer-top-container">
-            <div class="product">
-                Product
-            </div>
-            <div class="product">
-                Product
-            </div>
-            <div class="product">
-                Product
-            </div>
-        </div>
-
-        <hr>
-        <div class="footer-bottom-container">
-            <h2>Logo</h2>
-            <button>Get in touch</button>
-        </div> -->
+        <div class="favicon">Favicon Icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
     <script type="text/javascript" src="index.js"></script>
 </body>

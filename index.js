@@ -1,6 +1,6 @@
 //Desktop Nav 
 
-const desktopList = document.querySelector('.desktop-ul');
+const desktopList = document.querySelector('.desktop-nav ul');
 
 window.onscroll = () => {
     let currentScrollPos = window.pageYOffset;
@@ -12,6 +12,10 @@ window.onscroll = () => {
 
 document.querySelector(".burger-icon").addEventListener("click", function() {
     document.querySelector(".mobile-nav").classList.toggle("mobile-nav-active");
+    document.querySelector('.burger-icon .burger').classList.toggle('burger-icon-active');
+    document.querySelector('.burger-icon .cross').classList.toggle('cross-icon-active');
+    // document.querySelector('.burger-icon i').style.display = none;
+    // innerHTML = '<i class="fas fa-times"></i>';
 })
 
 // Carousel
