@@ -90,7 +90,7 @@ i {
 
 .mobile-nav-active {
     transform: translateY(0);
-    top: 2.2em;
+    top: 2.5em;
 }
 
 .cross {
@@ -112,7 +112,7 @@ i {
 }
 
 .burger-icon {
-    padding: 0.5em;
+    padding: 1em 1em 0.5em;
     cursor: pointer;
     position: fixed;
     top: 0;
