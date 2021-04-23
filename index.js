@@ -10,12 +10,13 @@ window.onscroll = () => {
 
 // Mobile nav
 
-document.querySelector(".burger-icon").addEventListener("click", function() {
-    document.querySelector(".mobile-nav").classList.toggle("mobile-nav-active");
+const burgerIcon = document.querySelector(".burger-icon");
+const mobileNav = document.querySelector(".mobile-nav");
+
+burgerIcon.addEventListener('click', () => {
+    mobileNav.classList.toggle('mobile-nav-active');
     document.querySelector('.burger-icon .burger').classList.toggle('burger-icon-active');
     document.querySelector('.burger-icon .cross').classList.toggle('cross-icon-active');
-    // document.querySelector('.burger-icon i').style.display = none;
-    // innerHTML = '<i class="fas fa-times"></i>';
 })
 
 // Carousel
@@ -32,17 +33,39 @@ const setIndex = () => {
     slider.style.transform = 'translate('+ (sectionIndex) * - 33.33 +'%)';
 }
 
-rightArrow.addEventListener('click', () => {
+const moveLeft = () => {
+    sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : 0;
+    setIndex();
+    controlDots[sectionIndex].classList.add('selected')
+}
+
+const moveRight = () => {
     sectionIndex = (sectionIndex < 2) ? sectionIndex + 1 : 2;
     setIndex();
     controlDots[sectionIndex].classList.add('selected');
-})
+}
+
+// Arrow icons
 
 leftArrow.addEventListener('click', () => {
-    sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : 0;
-    setIndex();
-    controlDots[sectionIndex].classList.add('selected') 
+    moveLeft();
 })
+
+rightArrow.addEventListener('click', () => {
+    moveRight();
+})
+
+// Keyboard arrows
+
+document.addEventListener('keydown', (e) => {
+        if (e.key === "ArrowLeft") {
+            moveLeft();
+        } else if (e.key === "ArrowRight") {
+            moveRight();
+        }   
+})
+
+// Bottom dots
 
 controlDots.forEach((indicator, ind) => {
     indicator.addEventListener('click', () => {

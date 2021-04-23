@@ -100,6 +100,7 @@ i {
     z-index: -1;
     visibility: hidden;
     font-size: 24px;
+    color: darkslategray;
 }
 
 .burger-icon-active {
