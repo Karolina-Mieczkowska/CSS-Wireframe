@@ -1,0 +1,854 @@
+/* ........................................................General */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: darkslategray;
+}
+
+a {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+p {
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+}
+
+i {
+    padding-right: 1em;
+}
+
+.favicon {
+    font-size: 14px;
+    margin: 0 2em;
+}
+
+/* ........................................................General */
+/* ........................................................Desktop Nav */
+
+.desktop-nav {
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.desktop-nav ul {
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.desktop-nav ul li {
+    position: relative;
+    top: 30%;
+    padding: 0 1em;
+}
+
+.desktop-nav ul li:last-child {
+    margin-right: 2em;
+}
+
+.desktop-nav a {
+    color: #fff;
+}
+
+.onscroll-nav {
+    background: #fff;
+}
+
+.onscroll-nav a {
+    color: #000;
+}
+
+/* ........................................................Desktop Nav */
+/* ........................................................Mobile Nav */
+
+.mobile-nav {
+    width: 100%;
+    display: none;
+    background: #fff;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: transform 0.5s linear;
+}
+
+.mobile-nav-active {
+    transform: translateY(0);
+    top: 2.5em;
+}
+
+.cross {
+    position: absolute;
+    top: 0.3em;
+    left: 0.5em;
+    z-index: -1;
+    visibility: hidden;
+    font-size: 24px;
+    color: darkslategray;
+}
+
+.burger-icon-active {
+    visibility: hidden;
+}
+
+.cross-icon-active {
+    visibility: visible;
+}
+
+.burger-icon {
+    padding: 1em 1em 0.5em;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    background: #fff;
+}
+
+.mobile-nav ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    margin-inline-end: 0;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.mobile-nav li {
+    padding: 1em;
+    text-align: center;
+}
+
+.mobile-nav li:last-child {
+    padding-bottom: 3em;
+}
+
+.mobile-nav a {
+    color: darkslategray;
+}
+
+/* ........................................................Mobile Nav */
+/* ..................................Header */
+
+.header {
+    background-image: 
+        linear-gradient(
+            315deg, 
+            rgba(144, 213, 236, 0.8) 0%, 
+            rgba(252, 87, 94, 0.8) 74%), 
+            url(../img/landscape-1844226.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    color: #000;
+}
+
+.nav-logo {
+    position: absolute;
+    padding: 2em;
+}
+
+.website-description {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+    margin-top: 13em;
+}
+
+.website-description > h1 {
+    font-size: 3em;
+    margin-block-end: 0.5em;
+    width: 60%;
+}
+
+.website-description > p {
+    font-weight: bolder;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;;
+    float: left;
+    margin: 0;
+}
+
+/* ..................................Header */
+/* ..................................About */
+
+.section-about {
+    flex: 1;
+}
+
+.website-section-title:first-child {
+    margin-top: 0;
+}
+
+.website-section-container {
+    padding-top: 3em;
+}
+
+.section-detail-container {
+    display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+
+.about-icon {
+    font-size: 5em;
+    padding-right: 0;
+    color: #3BA9DC;
+}
+
+.about-description {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4em;
+    background-color: transparent;
+}
+
+.about-detail-description {
+    text-align: center;
+}
+
+.about-detail-description h3 {
+    font-size: 1.5em;
+    margin-block-end: 0;
+}
+
+.about-detail-description p {
+    margin-block-start: 0.5em;
+}
+
+/* ..................................About */
+/* ....................................................................Services */
+
+.vector-image {
+    height: auto;
+    width: 50%;
+}
+
+.detail-container {
+    text-align: center;
+    padding-top: 0;
+}
+
+.detail-description {
+    padding: 2em;
+    background-color: transparent;    
+}
+
+.detail-description h4 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-block-start: 0;
+}
+
+/* ......................................................................Services */
+/* ......................................................................Testimonials */
+
+.testimonials {
+    width: 70%;
+    height: 22em;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; 
+    top: 0; 
+    margin-bottom: 2em;
+    margin-top: 2.5em;
+}
+
+.carousel {
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    height: 100%;
+    width: 300%;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.slider section {
+    height: 100%;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.controls .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.arrow i {
+    font-size: 3em;
+    padding-right: 0;
+}
+
+.arrow.left {
+    left: 3em;
+}
+
+.arrow.right {
+    right: 3em;
+}
+
+.slider section h4 {
+    font-size: 1.5em;
+}
+
+.slider section p {
+    padding: 0 7em;
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+.slider section i {
+    font-size: 0.8em;
+}
+
+/* ......................................Testimonial list */
+
+.controls ul {
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.controls ul li {
+    width: 14px;
+    height: 14px;
+    border: 2px solid lightblue;
+    border-radius: 50px;
+    margin: 10px;
+    background: lightblue;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+.controls ul li.selected {
+    background: transparent;
+}
+
+/* ......................................................................Testimonials */
+/* ..................................Form */
+
+.contact {
+    width: 100%;
+    background: #F1F6F9;
+    position: relative;
+    padding-top: 5em;
+}
+
+form {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* .....Inputs */
+
+.contact-input {
+    width: 100%;
+    height: 3em;
+    color: #3BA9DC;
+    margin-bottom: 1em;
+    font: 1.1em 'Montserrat', sans-serif;
+    padding: 1em 2em;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.contact-input:focus {
+    border: #3BA9DC;
+    border-style: solid;
+    outline: none;
+}
+
+.contact-input:-webkit-autofill,
+.contact-input:-webkit-autofill:hover, 
+.contact-input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 2px solid #3BA9DC;
+  -webkit-text-fill-color: #3BA9DC;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.contact-input::after {
+    background: #fff;
+}
+
+.contact-textarea::-webkit-input-placeholder,
+.contact-input::-webkit-input-placeholder {
+    color: #bde2f3;
+    font: 1.1em 'Montserrat', sans-serif;
+} 
+
+.contact-textarea::-moz-placeholder,
+.contact-input:-moz-placeholder {
+    color: #bde2f3;
+    font: 1.1em 'Montserrat', sans-serif;
+}
+
+.contact-textarea::-moz-placeholder,
+.contact-input::-moz-placeholder {
+    color: #bde2f3;
+    font: 1.1em 'Montserrat', sans-serif;
+}
+
+.contact-textarea:-ms-input-placeholder,
+.contact-input:-ms-input-placeholder {
+    color: #bde2f3;
+    font: 1.1em 'Montserrat', sans-serif;
+}
+
+/* .....Inputs */
+
+.contact-textarea {
+    height: 10em;
+    color: #3BA9DC;
+    margin-bottom: 1em;
+    font: 1.1em 'Montserrat', sans-serif;
+    padding: 1em 2em;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.contact-textarea:focus {
+    border: #3BA9DC;
+    border-style: solid;
+    outline: none;
+}
+
+.contact-textarea:-webkit-autofill,
+.contact-textarea:-webkit-autofill:hover, 
+.contact-textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #3BA9DC;
+  -webkit-text-fill-color: #3BA9DC;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.contact-input::after {
+    background: #fff;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #00598C;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: #0053ba;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.contact-title {
+    background: #F1F6F9;
+    padding-bottom: 1em;
+    text-align: center;
+    color: darkslategray;
+    font-size: 3em;
+}
+
+/* ..................................Form */
+/* ..................................Footer */
+
+.footer {
+    padding: 2em;
+    padding-top: 20%;
+    height: auto;
+    background: #3BA9DC;
+    color: #000;
+}
+
+.footer-bottom-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3em 5em;
+}
+
+.footer-top-section {
+    padding: 3em;
+    padding-top: 0;
+}
+
+.footer-icon {
+    font-size: 1.4em;
+}
+
+.footer-description {
+    width: 20em;
+    text-align: left;
+    padding-bottom: 2em;
+}
+
+.footer-description a {
+    color: black;
+}
+
+h3 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.footer-button {
+    width: 10em;
+    height: 3em;
+    margin: 0 3em;
+}
+
+.footer-button a {
+    color: #fff;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    border-radius: 4px;
+    background-color: darkslategray;
+    width: 92%;
+}
+
+.logo-icon {
+    padding-right: 0.5em;
+}
+
+/* ..................................Footer */
+/* ..................................................................Titles */
+
+.website-section-title {
+    margin-bottom: 0;
+    margin-top: 0.2em;
+    font-size: 3em;
+    color: darkslategray;
+}
+
+.description-title {
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    margin-block-end: 0;
+    background: transparent;
+}
+
+/* ..................................................................Titles */
+/* ..................................Waves */
+
+.wave {
+    background-image: url(../waves/wave.svg);
+    background-repeat: no-repeat;
+    background-position-y: 101%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.reversed-wave {
+    background-image: url(../waves/reversed-wave.svg);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    width: 100%;
+    position: absolute;
+}
+
+/* ..................................Waves */
+
+/* ........................................................General Small Screen */
+
+@media only screen and (max-width: 576px) {
+    p {
+        font-size: 1em;
+    }
+  }
+
+/* ........................................................Desktop Nav Tablet Screen */
+
+@media only screen and (max-width: 992px) {
+    .desktop-nav ul li:last-child {
+        margin-right: 1em;
+    }
+  }
+
+/* ........................................................Desktop Nav Small Tablet Screen */
+
+@media only screen and (max-width: 768px) {
+    .desktop-nav ul li {
+        padding: 0 0.5em;
+    }
+  }
+
+/* ........................................................Desktop Nav Mobile Screen */
+
+@media only screen and (max-width: 576px) {
+    .desktop-nav {
+        display: none;
+    }
+    .nav-logo {
+        top: 2.5em;
+    }
+  }
+
+/* ........................................................Mobile Nav Mobile Screen */
+
+@media only screen and (max-width: 576px) {
+    .mobile-nav, .burger-icon {
+        display: block;
+    }
+  }
+
+/* ..................................Header Small Screen*/
+
+@media only screen and (max-width: 576px) {
+    .website-description {
+        width: 100%;
+        height: auto;
+        padding: 2em;
+        margin-bottom: 3em;
+    }
+    .website-description > h1 {
+        font-size: 2em;
+        width: 100%;
+    }
+    .website-description > p {
+        font-size: 1em;
+    }
+  }
+
+/* ..................................About Tablet Screen */
+
+@media only screen and (max-width: 992px) {
+    .about-description {
+        width: 90%;
+    }
+    .section-detail-container {
+        width: 90%;
+    }
+  }
+
+/* ..................................About Mobile Screen */
+
+@media only screen and (max-width: 768px) {
+    .about-description {
+        margin-bottom: 0;
+    }
+    .website-section-title {
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 2em;
+        margin-top: 0.3em;
+    }
+    .website-section-title:first-child {
+        margin-top: 1em;
+    }
+    .section-detail-container {
+        flex-direction: column;
+    }
+  }
+
+/* ......................................................................Services Small Screen */
+
+@media only screen and (max-width: 576px) {
+    .section-detail-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+  }
+
+/* ......................................................................Testimonials Tablet Screen */
+
+@media only screen and (max-width: 992px) {
+    .testimonials {
+        width: 90%;
+        top: 0; 
+        height: 28em;
+    }
+}
+
+/* ......................................................................Testimonials Small Tablet Screen */
+
+@media only screen and (max-width: 768px) {
+    .testimonials {
+        width: 100%;
+        top: 0; 
+        height: 25em;
+    }
+    .carousel {
+        border: none;
+    }
+}
+
+/* ......................................................................Testimonials Mobile Screen */
+
+@media only screen and (max-width: 576px) {
+    .testimonials {
+        width: 100%;
+        top: 0; 
+        height: 30em;
+    }
+    .arrow.left {
+        left: 1em;
+    }
+    .arrow.right {
+        right: 1em;
+    }
+    .slider section p {
+        padding: 0 5em;
+        font-size: 1em;
+    }
+    .slider section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .title-mobile-position {
+        position: relative;
+        top: 3em;
+    }
+  }
+
+/* ..................................Form Small Tablet Screen */
+
+@media only screen and (max-width: 992px) {
+    form {
+        width: 70%;
+  }
+
+/* ..................................Form Mobile Screen */
+
+@media only screen and (max-width: 768px) {
+    .contact {
+        width: 100%;
+        padding-top: 2em;
+    }
+    form {
+        width: 90%;
+    }
+    .contact-title {
+        font-size: 2em;
+    }
+  }
+
+/* ..................................Footer Small Tablet Screen */
+
+@media only screen and (max-width: 768px) {
+    .footer-top-section {
+        padding: 1em;
+    }
+    .footer-bottom-section {
+        padding: 1em 3em;
+    }
+}
+
+/* ..................................Footer Small Screen */
+
+@media only screen and (max-width: 576px) {
+    .footer {
+        padding: 1em 0;
+    }
+    .footer-top-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 1em;
+        padding-top: 7em;
+    }
+    .footer-bottom-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 3em;
+    }
+    .footer-description {
+        width: 20em;
+        padding-bottom: 0;
+        text-align: center;
+    }
+    .footer-logo {
+        padding-bottom: 0em;
+    }
+    .footer-button {
+        margin: 0;
+    }
+  }
